@@ -1,11 +1,11 @@
 id_empleado,nombre_completo,rol_en_la_empresa,seniority,salario_hora_base,equipo_asignado
-1,Empleado_1,Desarrollador Senior,Junior,600,Alpha
-2,Empleado_2,Desarrollador Mid,Mid,400,Beta
-3,Empleado_3,Desarrollador Senior,Senior,600,Beta
-4,Empleado_4,Desarrollador Junior,Mid,250,Gamma
-5,Empleado_5,Líder de Proyecto,Mid,700,Gamma
-6,Empleado_6,Desarrollador Mid,Mid,400,Gamma
-7,Empleado_7,Tester QA,Senior,350,Beta
-8,Empleado_8,Desarrollador Senior,Junior,600,Alpha
-9,Empleado_9,Líder de Proyecto,Mid,700,Alpha
-10,Empleado_10,Líder de Proyecto,Mid,700,Alpha
+1,Empleado_1,Desarrollador Senior,Senior,600,Beta
+2,Empleado_2,Desarrollador Senior,Senior,600,Beta
+3,Empleado_3,Desarrollador Senior,Mid,600,Gamma
+4,Empleado_4,Desarrollador Junior,Junior,250,Gamma
+5,Empleado_5,Desarrollador Mid,Mid,400,Gamma
+6,Empleado_6,Desarrollador Senior,Junior,600,Beta
+7,Empleado_7,Tester QA,Mid,350,Beta
+8,Empleado_8,Desarrollador Senior,Mid,600,Beta
+9,Empleado_9,Desarrollador Senior,Mid,600,Alpha
+10,Empleado_10,Desarrollador Mid,Junior,400,Beta
