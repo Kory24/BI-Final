@@ -3,6 +3,7 @@ import os
 import time
 import sys
 import shutil
+import webbrowser
 from datetime import datetime
 
 def imprimir_titulo(mensaje):
@@ -67,12 +68,17 @@ def subir_a_git():
         print("🚀 Subiendo a GitHub (Streamlit Cloud detectará el cambio)...")
         subprocess.check_call("git push", shell=True)
         print("✅ ¡Cambios subidos exitosamente a GitHub!")
+        print("⏳ Esperando unos segundos para que Streamlit Cloud procese los cambios...")
+        time.sleep(5) # Darle un momento a la nube
         
     except subprocess.CalledProcessError as e:
         print(f"⚠️ Error al subir a Git: {e}")
         print("   (Asegúrate de haber configurado 'git remote' y tus credenciales previamente)")
 
 def main():
+    # URL de tu aplicación desplegada
+    APP_URL = "https://software-rapido.streamlit.app/"
+
     # 0. Verificar si tenemos Git
     tiene_git = verificar_herramientas()
 
@@ -87,23 +93,17 @@ def main():
     imprimir_titulo("Paso 3: Proceso ETL y Carga a SQLite")
     ejecutar_comando("python migrar_a_sqlite.py", "Migración a SQLite y Creación de Vistas")
     
-    # 4. Subir a GitHub (Opcional)
+    # 4. Subir a GitHub (Opcional pero recomendado para actualizar la nube)
     if tiene_git:
-        respuesta = input("\n¿Quieres subir los cambios a GitHub ahora? (s/n): ").lower()
+        respuesta = input("\n¿Quieres subir los cambios a GitHub para actualizar la web pública? (s/n): ").lower()
         if respuesta == 's':
             subir_a_git()
     
-    # 5. Desplegar Streamlit Localmente
-    imprimir_titulo("Paso 5: Despliegue Local de Aplicación")
-    print("🌐 Iniciando servidor de Streamlit local...")
-    print("   (Presiona Ctrl + C en esta terminal para detener la app)")
-    time.sleep(2)
-    
-    try:
-        # Usamos subprocess.run para que el script espere aquí mientras la app corre
-        subprocess.run("streamlit run app.py", shell=True)
-    except KeyboardInterrupt:
-        print("\n👋 Aplicación detenida por el usuario.")
+    # 5. Abrir la Aplicación en la Nube
+    imprimir_titulo("Paso 5: Apertura de Aplicación Web")
+    print(f"🌐 Abriendo tu entorno de prueba en: {APP_URL}")
+    webbrowser.open(APP_URL)
+    print("\n✨ ¡Proceso finalizado! Tu aplicación está lista en el navegador.")
 
 if __name__ == "__main__":
     main()
