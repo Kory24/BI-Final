@@ -7,7 +7,6 @@ engine = create_engine('sqlite:///proyecto_bi.db')
 print("--- INICIANDO MIGRACIÓN A SQLITE ---")
 
 # 2. LISTA DE ARCHIVOS CSV A CARGAR
-# Asegúrate de que estos archivos existan en tu carpeta (ya los generaste con simulacion_dwh.py)
 archivos = [
     'Dim_Tiempo.csv', 
     'Dim_Cliente.csv', 
