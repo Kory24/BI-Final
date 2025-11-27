@@ -1,0 +1,9 @@
+[theme]
+primaryColor = "#00B5E2"         # Pantone 306 C (Cyan - Botones y selección)
+backgroundColor = "#F4F6F8"      # Gris muy claro (Fondo general limpio)
+secondaryBackgroundColor = "#E1E6EA" # Gris suave (Inputs y áreas secundarias)
+textColor = "#194056"            # Pantone 302 C (Azul Oscuro - Texto principal)
+font = "sans serif"
+
+[server]
+port = 8501

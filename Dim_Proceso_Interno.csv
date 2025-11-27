@@ -1,0 +1,8 @@
+id_proceso,nombre_proceso,fase_sdlc,indicador_cumplimiento,documentacion_link
+1,Definición de Requisitos,Análisis,Obligatorio,http://docs.empresa.com/Definición_de_Requisitos
+2,Diseño de Arquitectura,Diseño,Obligatorio,http://docs.empresa.com/Diseño_de_Arquitectura
+3,Desarrollo Backend,Implementación,Obligatorio,http://docs.empresa.com/Desarrollo_Backend
+4,Desarrollo Frontend,Implementación,Obligatorio,http://docs.empresa.com/Desarrollo_Frontend
+5,Revisión de Código,Pruebas,Obligatorio,http://docs.empresa.com/Revisión_de_Código
+6,Pruebas QA (Funcionales),Pruebas,Obligatorio,http://docs.empresa.com/Pruebas_QA_(Funcionales)
+7,Despliegue en Producción,Despliegue,Obligatorio,http://docs.empresa.com/Despliegue_en_Producción

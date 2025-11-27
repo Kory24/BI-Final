@@ -1,0 +1,16 @@
+id_proyecto,id_cliente,nombre_proyecto,estado_actual,esfuerzo_estimado_total,presupuesto_total_mxn,tipo_desarrollo,nivel_madurez_aplicado
+1,2,Sistema_1,Activo,973,496333.73,Web,3
+2,6,Sistema_2,Entregado,395,201735.99,Web,4
+3,5,Sistema_3,Entregado,1340,704989.67,Integración,4
+4,8,Sistema_4,Entregado,851,481620.24,Integración,3
+5,3,Sistema_5,Entregado,1567,708473.41,Mobile,3
+6,8,Sistema_6,Entregado,1488,724344.42,Mobile,3
+7,6,Sistema_7,Entregado,994,450178.17,Integración,3
+8,2,Sistema_8,Entregado,445,204432.2,Web,3
+9,7,Sistema_9,Entregado,1904,1014369.2,Mobile,3
+10,3,Sistema_10,Entregado,967,395045.87,Web,3
+11,3,Sistema_11,Entregado,1629,941248.67,Mobile,4
+12,5,Sistema_12,Activo,1046,573470.12,Integración,3
+13,3,Sistema_13,Entregado,800,454439.64,Mobile,4
+14,6,Sistema_14,Entregado,906,501655.99,Integración,3
+15,1,Sistema_15,Entregado,669,275306.94,Integración,3

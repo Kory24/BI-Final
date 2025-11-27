@@ -1,0 +1,9 @@
+id_cliente,nombre_cliente,sector,tipo_contrato_principal
+1,Cliente_1,Retail,Precio Fijo
+2,Cliente_2,Retail,Suscripción
+3,Cliente_3,Salud,Tiempo y Materiales
+4,Cliente_4,Salud,Tiempo y Materiales
+5,Cliente_5,Finanzas,Precio Fijo
+6,Cliente_6,Educación,Precio Fijo
+7,Cliente_7,Salud,Precio Fijo
+8,Cliente_8,Educación,Precio Fijo
