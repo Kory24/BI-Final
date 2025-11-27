@@ -1,9 +1,9 @@
 id_empleado,nombre_completo,rol_en_la_empresa,seniority,salario_hora_base,equipo_asignado
-1,Colaborador_1,Tester QA,Mid,200,Dev Team B
-2,Colaborador_2,Líder de Proyecto,Mid,550,Dev Team A
-3,Colaborador_3,Desarrollador Senior,Senior,450,Dev Team A
-4,Colaborador_4,Tester QA,Senior,200,Dev Team B
-5,Colaborador_5,Desarrollador Senior,Senior,450,Dev Team B
-6,Colaborador_6,Desarrollador Senior,Senior,450,Dev Team B
-7,Colaborador_7,Tester QA,Senior,200,Dev Team A
-8,Colaborador_8,Líder de Proyecto,Junior,550,Dev Team A
+1,Colaborador_1,Desarrollador Junior,Senior,150,Dev Team A
+2,Colaborador_2,Tester QA,Senior,200,Dev Team B
+3,Colaborador_3,Tester QA,Junior,200,Dev Team A
+4,Colaborador_4,Desarrollador Senior,Mid,450,Dev Team A
+5,Colaborador_5,Desarrollador Senior,Junior,450,Dev Team B
+6,Colaborador_6,Tester QA,Senior,200,Dev Team A
+7,Colaborador_7,Desarrollador Mid,Mid,280,Dev Team A
+8,Colaborador_8,Tester QA,Senior,200,Dev Team B
