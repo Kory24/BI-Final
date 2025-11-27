@@ -1,13 +1,13 @@
 id_proyecto,id_cliente,nombre_proyecto,estado_actual,esfuerzo_estimado_total,presupuesto_total_mxn,tipo_desarrollo,nivel_madurez_aplicado
-1,1,App v1.0,Entregado,936,448249.09,E-commerce,2
-2,4,App v2.0,Entregado,579,231957.99,Móvil,3
-3,3,App v3.0,Activo,244,112999.83,Web,3
-4,2,App v4.0,Entregado,295,126741.51,E-commerce,2
-5,5,App v5.0,Entregado,718,332125.52,Web,3
-6,4,App v6.0,Entregado,244,108098.6,Web,2
-7,5,App v7.0,Activo,1055,441743.2,E-commerce,2
-8,5,App v8.0,Entregado,1097,519335.96,Móvil,3
-9,1,App v9.0,Activo,310,126695.68,E-commerce,3
-10,5,App v10.0,Entregado,489,234443.16,Web,2
-11,1,App v11.0,Activo,391,153589.65,Móvil,2
-12,5,App v12.0,Activo,576,245997.08,Web,3
+1,5,App v1.0,Entregado,676,314490.25,E-commerce,2
+2,2,App v2.0,Entregado,881,369463.65,Web,3
+3,5,App v3.0,Entregado,812,323429.5,E-commerce,3
+4,4,App v4.0,Activo,868,352124.24,Web,3
+5,2,App v5.0,Activo,995,466412.12,Web,3
+6,4,App v6.0,Entregado,657,299749.27,Web,2
+7,4,App v7.0,Entregado,231,96536.79,E-commerce,2
+8,2,App v8.0,Entregado,582,230404.6,Web,3
+9,3,App v9.0,Entregado,992,446909.09,E-commerce,3
+10,3,App v10.0,Entregado,984,411387.26,E-commerce,3
+11,3,App v11.0,Activo,363,170259.12,Móvil,3
+12,5,App v12.0,Entregado,822,336443.94,Web,3
