@@ -2,6 +2,8 @@ import subprocess
 import os
 import time
 import sys
+import shutil
+from datetime import datetime
 
 def imprimir_titulo(mensaje):
     """Imprime un mensaje con formato visual para separar pasos."""
@@ -21,8 +23,21 @@ def ejecutar_comando(comando, descripcion):
         print(f"   Detalle: {e}")
         sys.exit(1) # Detiene todo si un paso falla
 
+def verificar_herramientas():
+    """Verifica si Git está instalado y disponible en el sistema."""
+    imprimir_titulo("Paso 0: Verificación de Requisitos")
+    
+    # shutil.which busca el ejecutable en las variables de entorno (PATH)
+    if shutil.which("git") is None:
+        print("⚠️  ADVERTENCIA: Git no se encontró instalado o en el PATH.")
+        print("   La subida automática a GitHub no funcionará, pero el resto sí.")
+        return False
+    else:
+        print("✅ Git detectado correctamente.")
+        return True
+
 def limpiar_base_datos():
-    """Elimina el archivo de base de datos SQLite para empezar de cero."""
+    """Elimina el archivo de base de datos SQLite para asegurar una carga limpia."""
     archivo_db = 'proyecto_bi.db'
     imprimir_titulo("Paso 1: Limpieza de Base de Datos")
     
@@ -35,7 +50,32 @@ def limpiar_base_datos():
     else:
         print(f"ℹ️  No se encontró '{archivo_db}', se creará una nueva.")
 
+def subir_a_git():
+    """Realiza el proceso de add, commit y push a GitHub."""
+    imprimir_titulo("Paso 4: Actualización Automática en GitHub")
+    
+    try:
+        print("📦 Preparando archivos para subir...")
+        # Agrega todos los cambios (incluyendo nuevos archivos)
+        subprocess.check_call("git add .", shell=True)
+        
+        # Crea el commit con fecha y hora actual
+        mensaje_commit = f"Actualización automática: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
+        # Usamos subprocess.call en lugar de check_call para que no falle si no hay cambios
+        subprocess.call(f'git commit -m "{mensaje_commit}"', shell=True)
+        
+        print("🚀 Subiendo a GitHub (Streamlit Cloud detectará el cambio)...")
+        subprocess.check_call("git push", shell=True)
+        print("✅ ¡Cambios subidos exitosamente a GitHub!")
+        
+    except subprocess.CalledProcessError as e:
+        print(f"⚠️ Error al subir a Git: {e}")
+        print("   (Asegúrate de haber configurado 'git remote' y tus credenciales previamente)")
+
 def main():
+    # 0. Verificar si tenemos Git
+    tiene_git = verificar_herramientas()
+
     # 1. Limpiar BD antigua
     limpiar_base_datos()
     
@@ -47,14 +87,20 @@ def main():
     imprimir_titulo("Paso 3: Proceso ETL y Carga a SQLite")
     ejecutar_comando("python migrar_a_sqlite.py", "Migración a SQLite y Creación de Vistas")
     
-    # 4. Desplegar Streamlit
-    imprimir_titulo("Paso 4: Despliegue de Aplicación")
-    print("🌐 Iniciando servidor de Streamlit...")
-    print("   (Presiona Ctrl + C en esta terminal para detener la app)")
-    time.sleep(2) # Pausa dramática para leer
+    # 4. Subir a GitHub (Opcional)
+    if tiene_git:
+        respuesta = input("\n¿Quieres subir los cambios a GitHub ahora? (s/n): ").lower()
+        if respuesta == 's':
+            subir_a_git()
     
-    # Usamos subprocess.run sin check_call para que el script se mantenga vivo con la app
+    # 5. Desplegar Streamlit Localmente
+    imprimir_titulo("Paso 5: Despliegue Local de Aplicación")
+    print("🌐 Iniciando servidor de Streamlit local...")
+    print("   (Presiona Ctrl + C en esta terminal para detener la app)")
+    time.sleep(2)
+    
     try:
+        # Usamos subprocess.run para que el script espere aquí mientras la app corre
         subprocess.run("streamlit run app.py", shell=True)
     except KeyboardInterrupt:
         print("\n👋 Aplicación detenida por el usuario.")
