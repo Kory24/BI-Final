@@ -1,6 +1,6 @@
 id_cliente,nombre_cliente,sector,tipo_contrato_principal
-1,Cliente_1,Educación,Precio Fijo
-2,Cliente_2,Comercio Local,Bolsa de Horas
-3,Cliente_3,Pymes,Precio Fijo
-4,Cliente_4,Educación,Precio Fijo
-5,Cliente_5,Salud,Bolsa de Horas
+1,Cliente_1,Educación,Bolsa de Horas
+2,Cliente_2,Comercio Local,Precio Fijo
+3,Cliente_3,Comercio Local,Precio Fijo
+4,Cliente_4,Salud,Bolsa de Horas
+5,Cliente_5,Educación,Bolsa de Horas
