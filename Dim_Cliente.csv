@@ -1,9 +1,9 @@
 id_cliente,nombre_cliente,sector,tipo_contrato_principal
-1,Cliente_1,Tecnología,Precio Fijo
-2,Cliente_2,Salud,Suscripción
-3,Cliente_3,Salud,Suscripción
-4,Cliente_4,Finanzas,Suscripción
-5,Cliente_5,Salud,Suscripción
-6,Cliente_6,Retail,Suscripción
-7,Cliente_7,Salud,Precio Fijo
-8,Cliente_8,Salud,Tiempo y Materiales
+1,Cliente_1,Educación,Suscripción
+2,Cliente_2,Tecnología,Tiempo y Materiales
+3,Cliente_3,Educación,Suscripción
+4,Cliente_4,Educación,Precio Fijo
+5,Cliente_5,Tecnología,Suscripción
+6,Cliente_6,Salud,Precio Fijo
+7,Cliente_7,Educación,Suscripción
+8,Cliente_8,Educación,Suscripción
