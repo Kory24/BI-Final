@@ -128,8 +128,11 @@ if "Dashboard" in modo:
             df_cal = get_data("Vista_Calidad_Defectos")
             df_fin = get_data("Vista_Desempeño_Proyectos")
             
-            # Fila de Tarjetas de Métricas
-            c1, c2, c3, c4 = st.columns(4)
+            # Calculamos el Presupuesto Total sumando el de todos los proyectos
+            presupuesto_total = df_fin['Presupuesto_Original'].sum()
+            
+            # Ajustamos a 5 columnas para que quepa el nuevo dato
+            c1, c2, c3, c4, c5 = st.columns(5)
             
             total_defectos = df_cal['Total_Defectos'].sum()
             mttr_promedio = df_cal['Promedio_Horas_Resolucion_MTTR'].mean()
@@ -138,8 +141,12 @@ if "Dashboard" in modo:
 
             c1.metric("Defectos Totales", f"{total_defectos}")
             c2.metric("MTTR Promedio", f"{mttr_promedio:.1f} h")
-            c3.metric("Costo Real", f"${costo_total:,.0f}")
-            c4.metric("Proyectos Activos", f"{proyectos_activos}")
+            
+            # Mostramos Presupuesto vs Costo Real con un indicador de diferencia (delta)
+            c3.metric("Presupuesto Total", f"${presupuesto_total:,.0f}")
+            c4.metric("Costo Real (Gastado)", f"${costo_total:,.0f}", delta=f"${presupuesto_total - costo_total:,.0f} Restante")
+            
+            c5.metric("Proyectos Activos", f"{proyectos_activos}")
             
             st.markdown("<br>", unsafe_allow_html=True)
 

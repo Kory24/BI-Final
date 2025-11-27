@@ -109,7 +109,6 @@ for i in range(1, N_PROYECTOS + 1):
     
     # LÓGICA DE PRESUPUESTO RENTABLE:
     # Presupuesto = Costo Estimado + Margen de Ganancia (30% a 60%)
-    # Esto asegura que casi siempre haya dinero de sobra ("En Presupuesto")
     margen_ganancia = np.random.uniform(1.30, 1.60) 
     presupuesto = (esfuerzo_estimado * costo_promedio_hr) * margen_ganancia
     
